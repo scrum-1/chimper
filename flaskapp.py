@@ -889,18 +889,13 @@ def get_page2(heading, head, edit, get_page_content = None):
     
     # edit=0 for viewpage
     if edit == 0:
-        '''
-        # before add tipue search function
         return set_css2() + "<div class='container'><nav>"+ \
-        directory + "</nav><section>" + return_content + "</section></div></body></html>"
-        '''
-        return set_css2() + "<div class='container'><nav>"+ \
-        directory + "<section><div id=\"tipue_search_content\">" + return_content + \
-        '''</div></section></div>
+        directory + "<div id=\"tipue_search_content\">" + return_content + \
+        '''</div>
         
     <!-- footer -->
       <div class="container">
-        <div class="row">
+        <div class="row pt-3 mx-auto">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
@@ -911,7 +906,7 @@ def get_page2(heading, head, edit, get_page_content = None):
     <!-- for footer -->
     
         </div> <!-- for site wrap -->
-            <script src="../static/chimper/js/jquery-3.3.1.min.js"></script>
+            <!-- <script src="../static/chimper/js/jquery-3.3.1.min.js"></script> -->
             <script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
             <script src="../static/chimper/js/jquery-ui.js"></script>
             <script src="../static/chimper/js/popper.min.js"></script>
@@ -922,6 +917,7 @@ def get_page2(heading, head, edit, get_page_content = None):
             <script src="../static/chimper/js/jquery.magnific-popup.min.js"></script>
             <script src="../static/chimper/js/bootstrap-datepicker.min.js"></script>
             <script src="../static/chimper/js/aos.js"></script>
+            <!--
             <script src="../static/chimper/js/typed.js"></script>
                     <script>
                     var typed = new Typed('.typed-words', {
@@ -934,9 +930,8 @@ def get_page2(heading, head, edit, get_page_content = None):
                     showCursor: true
                     });
                     </script>
-            
+            -->
             <script src="../static/chimper/js/main.js"></script>
-
         </body></html>
         '''
     # enter edit mode
@@ -1691,9 +1686,25 @@ def render_menu2(head, level, page, sitemap=0):
     current_level = level[0]
     # 若是 sitemap 則僅列出樹狀架構而沒有套用 css3menu 架構
     if sitemap:
-        directory += "<ul>"
+        directory += '''<ul>
+<li>
+<form>
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+</div>
+</form>
+</li>
+        '''
     else:
-        directory += "<ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>"
+        directory += '''<ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+<li>
+<form>
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+</div>
+</form>
+</li>
+        '''
     # 納入主頁與表單
     directory += '''
                         <li class="active has-children"><a href="index.html">Home</a>
@@ -2077,43 +2088,53 @@ def set_css2():
         <link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
         <link rel="stylesheet" href="./../static/chimper/css/aos.css">
         <link rel="stylesheet" href="./../static/chimper/css/style.css">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+        </style>
     '''
     outstring = '''<!DOCTYPE html><html>''' + static_head + '''
-        <script src="tipuesearch_content.js"></script>
-        <script src="./../static/jquery.js"></script>
-        <link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+        <!-- <script src="./../static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css">
         <script src="./../static/tipuesearch/tipuesearch_set.js"></script>
-        <script src="./../static/tipuesearch/tipuesearch.min.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css">
+        <script src="./../static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
         ''' + syntaxhighlight2()
 
-    outstring += '''
-<script type="text/javascript">
-/*shorthand of $(document).ready(function(){};); */
-/*
-$(function(){
-    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
-    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
-});
-*/
-function doSearch() {
-     $('#tipue_search_input').tipuesearch({
-        newWindow: true, minimumLength: 2
-     });
-}
-$(document).ready(doSearch);
-</script>
-'''
     site_title, password = parse_config()
     if uwsgi:
         outstring += '''
 <script type="text/javascript">
 if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1)) \
 window.location= 'https://' + location.host + location.pathname + location.search;
-</script></head>
+</script></head><body>
 '''
     else:
         outstring += '''
 </head>
+<body>
 '''
     return outstring
 

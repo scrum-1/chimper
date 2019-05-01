@@ -2336,18 +2336,13 @@ def get_page2(heading, head, edit, get_page_content = None):
     
     # edit=0 for viewpage
     if edit == 0:
-        '''
-        # before add tipue search function
         return set_css2() + "&lt;div class='container'&gt;&lt;nav&gt;"+ \
-        directory + "&lt;/nav&gt;&lt;section&gt;" + return_content + "&lt;/section&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
-        '''
-        return set_css2() + "&lt;div class='container'&gt;&lt;nav&gt;"+ \
-        directory + "&lt;section&gt;&lt;div id=\"tipue_search_content\"&gt;" + return_content + \
-        '''&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+        directory + "&lt;div id=\"tipue_search_content\"&gt;" + return_content + \
+        '''&lt;/div&gt;
         
     &lt;!-- footer --&gt;
       &lt;div class="container"&gt;
-        &lt;div class="row"&gt;
+        &lt;div class="row pt-3 mx-auto"&gt;
             &lt;p&gt;
             &lt;!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --&gt;
             Copyright &amp;copy;&lt;script&gt;document.write(new Date().getFullYear());&lt;/script&gt; All rights reserved | This template is made with &lt;i class="icon-heart" aria-hidden="true"&gt;&lt;/i&gt; by &lt;a href="https://colorlib.com" target="_blank" &gt;Colorlib&lt;/a&gt;
@@ -2358,7 +2353,7 @@ def get_page2(heading, head, edit, get_page_content = None):
     &lt;!-- for footer --&gt;
     
         &lt;/div&gt; &lt;!-- for site wrap --&gt;
-            &lt;script src="../static/chimper/js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+            &lt;!-- &lt;script src="../static/chimper/js/jquery-3.3.1.min.js"&gt;&lt;/script&gt; --&gt;
             &lt;script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/jquery-ui.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/popper.min.js"&gt;&lt;/script&gt;
@@ -2369,6 +2364,7 @@ def get_page2(heading, head, edit, get_page_content = None):
             &lt;script src="../static/chimper/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/aos.js"&gt;&lt;/script&gt;
+            &lt;!--
             &lt;script src="../static/chimper/js/typed.js"&gt;&lt;/script&gt;
                     &lt;script&gt;
                     var typed = new Typed('.typed-words', {
@@ -2381,9 +2377,8 @@ def get_page2(heading, head, edit, get_page_content = None):
                     showCursor: true
                     });
                     &lt;/script&gt;
-            
+            --&gt;
             &lt;script src="../static/chimper/js/main.js"&gt;&lt;/script&gt;
-
         &lt;/body&gt;&lt;/html&gt;
         '''
     # enter edit mode
@@ -2487,43 +2482,53 @@ def get_page2(heading, head, edit, get_page_content = None):
         &lt;link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css"&gt;
         &lt;link rel="stylesheet" href="./../static/chimper/css/aos.css"&gt;
         &lt;link rel="stylesheet" href="./../static/chimper/css/style.css"&gt;
+        
+        &lt;style type='text/css'&gt;
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+        &lt;/style&gt;
     '''
     outstring = '''&lt;!DOCTYPE html&gt;&lt;html&gt;''' + static_head + '''
-        &lt;script src="tipuesearch_content.js"&gt;&lt;/script&gt;
-        &lt;script src="./../static/jquery.js"&gt;&lt;/script&gt;
-        &lt;link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css"&gt;
+        &lt;!-- &lt;script src="./../static/jquery.js"&gt;&lt;/script&gt; --&gt;
+        &lt;!-- &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt; --&gt;
+        &lt;script src="../static/chimper/js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+        &lt;link rel="stylesheet" href="./../static/tipuesearch/css/normalize.min.css"&gt;
         &lt;script src="./../static/tipuesearch/tipuesearch_set.js"&gt;&lt;/script&gt;
-        &lt;script src="./../static/tipuesearch/tipuesearch.min.js"&gt;&lt;/script&gt;
+        &lt;script src="tipuesearch_content.js"&gt;&lt;/script&gt;
+        &lt;link rel="stylesheet" href="./../static/tipuesearch/css/tipuesearch.css"&gt;
+        &lt;script src="./../static/tipuesearch/tipuesearch.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        &lt;/script&gt;
         ''' + syntaxhighlight2()
 
-    outstring += '''
-&lt;script type="text/javascript"&gt;
-/*shorthand of $(document).ready(function(){};); */
-/*
-$(function(){
-    $("ul.topmenu&gt; li:has(ul) &gt; a").append('&lt;div class="arrow-right"&gt;&lt;/div&gt;');
-    $("ul.topmenu &gt; li ul li:has(ul) &gt; a").append('&lt;div class="arrow-right"&gt;&lt;/div&gt;');
-});
-*/
-function doSearch() {
-     $('#tipue_search_input').tipuesearch({
-        newWindow: true, minimumLength: 2
-     });
-}
-$(document).ready(doSearch);
-&lt;/script&gt;
-'''
     site_title, password = parse_config()
     if uwsgi:
         outstring += '''
 &lt;script type="text/javascript"&gt;
 if ((location.href.search(/http:/) != -1) &amp;&amp; (location.href.search(/login/) != -1)) \
 window.location= 'https://' + location.host + location.pathname + location.search;
-&lt;/script&gt;&lt;/head&gt;
+&lt;/script&gt;&lt;/head&gt;&lt;body&gt;
 '''
     else:
         outstring += '''
 &lt;/head&gt;
+&lt;body&gt;
 '''
     return outstring
 
@@ -3018,9 +3023,25 @@ js 與 css, fonts, scss 位於 /static/chimper 目錄中
     current_level = level[0]
     # 若是 sitemap 則僅列出樹狀架構而沒有套用 css3menu 架構
     if sitemap:
-        directory += "&lt;ul&gt;"
+        directory += '''&lt;ul&gt;
+&lt;li&gt;
+&lt;form&gt;
+&lt;div class="tipue_search_group"&gt;
+&lt;input type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required&gt;&lt;button type="submit" class="tipue_search_button"&gt;&lt;div class="tipue_search_icon"&gt;&amp;#9906;&lt;/div&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/li&gt;
+        '''
     else:
-        directory += "&lt;ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'&gt;"
+        directory += '''&lt;ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'&gt;
+&lt;li&gt;
+&lt;form&gt;
+&lt;div class="tipue_search_group"&gt;
+&lt;input type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required&gt;&lt;button type="submit" class="tipue_search_button"&gt;&lt;div class="tipue_search_icon"&gt;&amp;#9906;&lt;/div&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+&lt;/li&gt;
+        '''
     # 納入主頁與表單
     directory += '''
                         &lt;li class="active has-children"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;
