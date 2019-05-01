@@ -126,10 +126,92 @@ $(document).ready(doSearch);
           </div>
           
         </header>
-    <section><div id="tipue_search_content"> <a href='計算機程式.html'>Next</a> >> 計算機程式<br /><h1>簡介</h1>
-<p>CMSimfly (<a href="https://github.com/chiamingyen/cmsimfly">https://github.com/chiamingyen/cmsimfly)</a> 是一套簡單的網際內容管理系統, 採用 Flask 網際框架, 以 Beautifulsoup 解讀分頁內容.</p>
-<p><img alt="" height="471" src="./../images/gocycle4.png" width="587"/></p>
-<br /> <a href='計算機程式.html'>Next</a> >> 計算機程式</div></section></div>
+    <section><div id="tipue_search_content">Lua 程式碼 << <a href='Lua 程式碼.html'>Previous</a> <a href='Html 原始碼.html'>Next</a> >> Html 原始碼<br /><h1>Javascript 程式碼</h1>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">STLViewer = function(stlpath, plotarea) {
+
+	var mycanvas = document.getElementById(plotarea);
+	var viewer = new JSC3D.Viewer(mycanvas)
+	var theScene = new JSC3D.Scene;
+	////Initialize with a default file:
+	//var stlpath = "../../../assets/2013-10-23/stl/box.STL"
+	//var stlpath = "../../../assets/2013-10-23/stl/taj.stl"
+	viewer.setParameter('SceneUrl', stlpath);
+    viewer.setParameter('InitRotationX', 20);
+	viewer.setParameter('InitRotationY', 20);
+	viewer.setParameter('InitRotationZ', 0);
+	viewer.setParameter('ModelColor', '#CAA618');
+	viewer.setParameter('BackgroundColor1', '#FFFFFF');
+	viewer.setParameter('BackgroundColor2', '#383840');
+	viewer.init();
+	viewer.update();
+	////init done
+	var canvas_drop = document.getElementById('canvas-drop')
+	/*var dropzone = document.getElementById('dropzone')
+	dropzone.addEventListener('dragover', handleDragOver, false);
+	dropzone.addEventListener('drop', handleFileSelect, false); */
+	canvas_drop.addEventListener('dragover', handleDragOver, false);
+	canvas_drop.addEventListener('drop', handleFileSelect, false);
+
+////Drag and drop logic:
+	function handleFileSelect(evt) {
+	    evt.stopPropagation();
+	    evt.preventDefault();
+	    var files = evt.dataTransfer.files;
+	    console.log(evt)
+	    console.log(files)
+	    preview_stl(files[0])
+	  }
+
+	  function handleDragOver(evt) {
+	    evt.stopPropagation();
+	    evt.preventDefault();
+	    evt.dataTransfer.dropEffect = 'copy';
+	  }
+
+////jsc3d logic
+	var handle_file_select = function(e) {
+		e.stopPropagation()
+		e.preventDefault()
+		var f = e.target.files[0]
+		preview_stl(f)
+	}
+
+	function preview_stl(f) {
+		var reader = new FileReader()
+		var ext = f.name.split(".")[1]
+
+		function setup_viewer() {
+			viewer.setParameter('InitRotationX', 20);
+			viewer.setParameter('InitRotationY', 20);
+			viewer.setParameter('InitRotationZ', 0);
+			viewer.setParameter('ModelColor', '#CAA618');
+			viewer.setParameter('BackgroundColor1', '#FFFFFF');
+			viewer.setParameter('BackgroundColor2', '#383840');
+			viewer.setParameter('RenderMode', "flat");
+		}
+		setup_viewer()
+
+		reader.onload = (function(file) {
+			return function(e) {
+				theScene = new JSC3D.Scene
+		    	stl_loader = new JSC3D.StlLoader()
+		    	stl_loader.parseStl(theScene, e.target.result)
+		      	//viewer.init()
+		      	viewer.replaceScene(theScene)
+		      	viewer.update()
+		      	console.log("file reader onload")
+			}
+		})(f)
+
+		if (ext.toLowerCase() != "stl") {
+			alert("That doesn't appear to be an STL file.");
+		} else {
+			reader.readAsBinaryString(f)
+		}
+	}
+}
+</pre>
+<p></p><br />Lua 程式碼 << <a href='Lua 程式碼.html'>Previous</a> <a href='Html 原始碼.html'>Next</a> >> Html 原始碼</div></section></div>
         </div> <!-- for site wrap -->
             <script src="../static/chimper/js/jquery-3.3.1.min.js"></script>
             <script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
