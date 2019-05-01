@@ -30,9 +30,12 @@
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     @others
-&lt;/html&gt;</t>
+&lt;/html&gt;
+
+</t>
 <t tx="leo.20190501110353.1">&lt;body&gt;
 &lt;&lt;head&gt;&gt;
+
 
 &lt;div class="site-wrap"&gt;
     &lt;&lt;mobile-menu&gt;&gt;
@@ -56,7 +59,9 @@
 
 &lt;/div&gt;
 &lt;&lt;scripts&gt;&gt;
-&lt;/body&gt;</t>
+&lt;/body&gt;
+
+</t>
 <t tx="leo.20190501110610.1">&lt;script src="../static/chimper/js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="../static/chimper/js/jquery-ui.js"&gt;&lt;/script&gt;
@@ -82,7 +87,9 @@
         });
         &lt;/script&gt;
 
-&lt;script src="../static/chimper/js/main.js"&gt;&lt;/script&gt;</t>
+&lt;script src="../static/chimper/js/main.js"&gt;&lt;/script&gt;
+
+</t>
 <t tx="leo.20190501110756.1">&lt;footer class="site-footer"&gt;
   &lt;div class="container"&gt;
     &lt;div class="row"&gt;
@@ -135,7 +142,9 @@
       
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/footer&gt;</t>
+&lt;/footer&gt;
+
+</t>
 <t tx="leo.20190501110913.1">&lt;section class="site-section bg-light"&gt;
   &lt;div class="container"&gt;
     &lt;div class="row justify-content-center"&gt;
@@ -175,7 +184,9 @@
       
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190501111012.1"></t>
 <t tx="leo.20190501111040.1">&lt;section class="site-section"&gt;
   &lt;div class="container"&gt;
@@ -223,7 +234,9 @@
       
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190501111114.1">&lt;section class="site-section"&gt;
   &lt;div class="container"&gt;
     &lt;div class="row"&gt;
@@ -252,7 +265,9 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;</t>
+&lt;/section&gt;
+
+</t>
 <t tx="leo.20190501111143.1">&lt;section class="section ft-feature-1"&gt;
   &lt;div class="container"&gt;
     &lt;div class="row align-items-stretch"&gt;
@@ -300,8 +315,11 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;</t>
-<t tx="leo.20190501111212.1">&lt;div class="site-blocks-cover overlay" style="background-image: url(./../images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
+&lt;/section&gt;
+
+</t>
+<t tx="leo.20190501111212.1">
+&lt;div class="site-blocks-cover overlay" style="background-image: url(./../images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
     &lt;div class="container"&gt;
         &lt;div class="row align-items-center justify-content-center text-center"&gt;
         
@@ -318,7 +336,9 @@
           &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;  </t>
+&lt;/div&gt;  
+
+</t>
 <t tx="leo.20190501111303.1">&lt;header class="site-navbar py-4 bg-white" role="banner"&gt;
 
   &lt;div class="container"&gt;
@@ -358,7 +378,8 @@
     &lt;/div&gt;
   &lt;/div&gt;
   
-&lt;/header&gt;</t>
+&lt;/header&gt;
+</t>
 <t tx="leo.20190501111426.1">&lt;div class="border-bottom top-bar py-2"&gt;
   &lt;div class="container"&gt;
     &lt;div class="row"&gt;
@@ -378,7 +399,9 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt; 
-&lt;/div&gt;</t>
+&lt;/div&gt;
+
+</t>
 <t tx="leo.20190501111510.1">&lt;div class="site-mobile-menu"&gt;
   &lt;div class="site-mobile-menu-header"&gt;
     &lt;div class="site-mobile-menu-close mt-3"&gt;
@@ -386,7 +409,9 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="site-mobile-menu-body"&gt;&lt;/div&gt;
-&lt;/div&gt;</t>
+&lt;/div&gt;
+
+</t>
 <t tx="leo.20190501111600.1">&lt;head&gt;
 &lt;title&gt;Chimper &amp;mdash; Colorlib Website Template&lt;/title&gt;
 &lt;meta charset="utf-8"&gt;
@@ -409,7 +434,8 @@
 
 &lt;link rel="stylesheet" href="./../static/chimper/css/style.css"&gt;
 
-&lt;/head&gt;</t>
+&lt;/head&gt;
+</t>
 <t tx="leo.20190501120949.1"></t>
 </tnodes>
 </leo_file>
