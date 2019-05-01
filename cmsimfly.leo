@@ -2344,6 +2344,19 @@ def get_page2(heading, head, edit, get_page_content = None):
         return set_css2() + "&lt;div class='container'&gt;&lt;nav&gt;"+ \
         directory + "&lt;section&gt;&lt;div id=\"tipue_search_content\"&gt;" + return_content + \
         '''&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+        
+    &lt;!-- footer --&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;p&gt;
+            &lt;!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --&gt;
+            Copyright &amp;copy;&lt;script&gt;document.write(new Date().getFullYear());&lt;/script&gt; All rights reserved | This template is made with &lt;i class="icon-heart" aria-hidden="true"&gt;&lt;/i&gt; by &lt;a href="https://colorlib.com" target="_blank" &gt;Colorlib&lt;/a&gt;
+            &lt;!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;!-- for footer --&gt;
+    
         &lt;/div&gt; &lt;!-- for site wrap --&gt;
             &lt;script src="../static/chimper/js/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/jquery-migrate-3.0.1.min.js"&gt;&lt;/script&gt;
