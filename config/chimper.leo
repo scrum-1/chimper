@@ -147,7 +147,7 @@
     &lt;div class="row"&gt;
       &lt;div class="col-md-6 col-lg-4 mb-4 mb-lg-4"&gt;
         &lt;div class="h-entry"&gt;
-          &lt;img src="images/img_1.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_1.jpg" alt="Image" class="img-fluid"&gt;
           &lt;h2 class="font-size-regular"&gt;&lt;a href="#"&gt;Create Beautiful Website In Less Than An Hour&lt;/a&gt;&lt;/h2&gt;
           &lt;div class="meta mb-4"&gt;Ham Brook &lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; Jan 18, 2019&lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; &lt;a href="#"&gt;News&lt;/a&gt;&lt;/div&gt;
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.&lt;/p&gt;
@@ -156,7 +156,7 @@
       &lt;/div&gt;
       &lt;div class="col-md-6 col-lg-4 mb-4 mb-lg-4"&gt;
         &lt;div class="h-entry"&gt;
-          &lt;img src="images/img_2.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_2.jpg" alt="Image" class="img-fluid"&gt;
           &lt;h2 class="font-size-regular"&gt;&lt;a href="#"&gt;Create Beautiful Website In Less Than An Hour&lt;/a&gt;&lt;/h2&gt;
           &lt;div class="meta mb-4"&gt;James Phelps &lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; Jan 18, 2019&lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; &lt;a href="#"&gt;News&lt;/a&gt;&lt;/div&gt;
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.&lt;/p&gt;
@@ -165,7 +165,7 @@
       &lt;/div&gt;
       &lt;div class="col-md-6 col-lg-4 mb-4 mb-lg-4"&gt;
         &lt;div class="h-entry"&gt;
-          &lt;img src="images/img_1.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_1.jpg" alt="Image" class="img-fluid"&gt;
           &lt;h2 class="font-size-regular"&gt;&lt;a href="#"&gt;Create Beautiful Website In Less Than An Hour&lt;/a&gt;&lt;/h2&gt;
           &lt;div class="meta mb-4"&gt;James Phelps &lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; Jan 18, 2019&lt;span class="mx-2"&gt;&amp;bullet;&lt;/span&gt; &lt;a href="#"&gt;News&lt;/a&gt;&lt;/div&gt;
           &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.&lt;/p&gt;
@@ -190,7 +190,7 @@
     &lt;div class="row"&gt;
       &lt;div class="col-md-6 col-lg-4"&gt;
         &lt;a href="#" class="media-1"&gt;
-          &lt;img src="images/img_1.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_1.jpg" alt="Image" class="img-fluid"&gt;
           &lt;div class="media-1-content"&gt;
             &lt;h2&gt;Project Name 1&lt;/h2&gt;
             &lt;span class="category"&gt;Web Application&lt;/span&gt;
@@ -199,7 +199,7 @@
       &lt;/div&gt;
       &lt;div class="col-md-6 col-lg-4"&gt;
         &lt;a href="#" class="media-1"&gt;
-          &lt;img src="images/img_2.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_2.jpg" alt="Image" class="img-fluid"&gt;
           &lt;div class="media-1-content"&gt;
             &lt;h2&gt;Project Name 2&lt;/h2&gt;
             &lt;span class="category"&gt;Branding&lt;/span&gt;
@@ -208,7 +208,7 @@
       &lt;/div&gt;
       &lt;div class="col-md-6 col-lg-4"&gt;
         &lt;a href="#" class="media-1"&gt;
-          &lt;img src="images/img_3.jpg" alt="Image" class="img-fluid"&gt;
+          &lt;img src="./../images/img_3.jpg" alt="Image" class="img-fluid"&gt;
           &lt;div class="media-1-content"&gt;
             &lt;h2&gt;Project Name 3&lt;/h2&gt;
             &lt;span class="category"&gt;Website&lt;/span&gt;
@@ -266,7 +266,7 @@
                 &lt;/div&gt;
                 &lt;h2&gt;Welcome To Chimper An Awward Winning Web Agency&lt;/h2&gt;
               &lt;/div&gt;
-              &lt;img src="images/about_1.jpg" alt="Image" class="img-feature img-fluid"&gt;
+              &lt;img src="./../images/about_1.jpg" alt="Image" class="img-feature img-fluid"&gt;
             &lt;/div&gt;
           &lt;/div&gt;
           &lt;div class="col-lg-3 ml-auto"&gt;
@@ -301,7 +301,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</t>
-<t tx="leo.20190501111212.1">&lt;div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
+<t tx="leo.20190501111212.1">&lt;div class="site-blocks-cover overlay" style="background-image: url(./../images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5"&gt;
     &lt;div class="container"&gt;
         &lt;div class="row align-items-center justify-content-center text-center"&gt;
         
