@@ -2356,6 +2356,21 @@ def get_page2(heading, head, edit, get_page_content = None):
             &lt;script src="../static/chimper/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/bootstrap-datepicker.min.js"&gt;&lt;/script&gt;
             &lt;script src="../static/chimper/js/aos.js"&gt;&lt;/script&gt;
+            &lt;script src="../static/chimper/js/typed.js"&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    &lt;/script&gt;
+            
+            &lt;script src="../static/chimper/js/main.js"&gt;&lt;/script&gt;
+
         &lt;/body&gt;&lt;/html&gt;
         '''
     # enter edit mode
