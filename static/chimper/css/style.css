@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5,
           font-family: 'icomoon'; }
       .site-navbar .site-navigation .site-menu .has-children .dropdown {
         visibility: hidden;
-        opacity: 0;
+        opacity: 1;
         top: 100%;
         position: absolute;
         text-align: left;

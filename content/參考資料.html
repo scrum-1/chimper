@@ -14,11 +14,15 @@
         <link rel="stylesheet" href="./../static/chimper/fonts/flaticon/font/flaticon.css">
         <link rel="stylesheet" href="./../static/chimper/css/aos.css">
         <link rel="stylesheet" href="./../static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../static/favicons.png">
         
         <style type='text/css'>
             .site-section {
             background-color: #FFFF;
             padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
             }
         </style>
     
@@ -97,6 +101,7 @@ init_mathjax();
 </head>
 <body>
 <div class='container'><nav>
+        
     <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -109,9 +114,14 @@ init_mathjax();
     </div>
     
             <header class="site-navbar py-4 bg-white" role="banner">
-              <div class="container">
+              <div class="container-fluid">
                 <div class="row align-items-center">
                 <h1>Bootstrap 4 Frontend Framework Tutorial</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
                   <!-- <div class="col-11 col-xl-2">
                     <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">Bootstrap 4 Frontend Framework Tutorial</a></h1> 
                   </div>
@@ -119,14 +129,6 @@ init_mathjax();
                   <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
     <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
-<li>
-<form>
-<div class="tipue_search_group">
-<input type="text" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
-</div>
-</form>
-</li>
-        
                         <li class="active has-children"><a href="index.html">Home</a>
                         <ul class="dropdown">
                             <li><a href="sitemap.html">Site Map</a></li>
@@ -134,7 +136,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='active has-children'><a href='簡介.html'>簡介&nbsp;<i class='glyphicon glyphicon-triangle-bottom'></i></a><ul class='dropdown'><li><a href='Bootstrap.html'>Bootstrap</a></li></ul><li><a href='參考資料.html'>參考資料</a><li><a href='範例.html'>範例</a></li>
+                     <li class='has-children'><a href='簡介.html'>簡介</a><ul class='dropdown'><li><a href='Bootstrap.html'>Bootstrap</a></li></ul><li><a href='參考資料.html'>參考資料</a><li><a href='範例.html'>範例</a></li>
                       </ul>
                 </nav>
               </div>
